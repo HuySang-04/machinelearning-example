@@ -43,24 +43,24 @@ print('Describe: ', data.describe())
 print('Info: ', data.info())
 data = data.dropna()
 
-# plt.figure(figsize=(8, 6))
-# sns.countplot(x=data['Company Name'])
-# plt.title('Distribution of Company Name')
-# plt.xticks(rotation=90)
-# plt.show()
-#
-# plt.figure(figsize=(10, 8))
-# sns.heatmap(data.select_dtypes(include='number').corr(), annot=True, fmt='.1f', cmap='coolwarm')
-# plt.title("Heat map")
-# plt.show()
+plt.figure(figsize=(8, 6))
+sns.countplot(x=data['Company Name'])
+plt.title('Distribution of Company Name')
+plt.xticks(rotation=90)
+plt.show()
 
-# list_price = ['Launched Price (Pakistan)', 'Launched Price (India)', 'Launched Price (China)', 'Launched Price (USA)',
-#               'Launched Price (Dubai)']
-# fig, axes = plt.subplots(2, 5, figsize=(20, 15))
-# for i, item in enumerate(list_price):
-#     sns.lineplot(x=data[item], y=data['Back Camera'], marker='o', ax=axes[0, i])
-#     sns.lineplot(x=data[item], y=data['Front Camera'], marker='o', color='red', ax=axes[1, i])
-# plt.show()
+plt.figure(figsize=(10, 8))
+sns.heatmap(data.select_dtypes(include='number').corr(), annot=True, fmt='.1f', cmap='coolwarm')
+plt.title("Heat map")
+plt.show()
+
+list_price = ['Launched Price (Pakistan)', 'Launched Price (India)', 'Launched Price (China)', 'Launched Price (USA)',
+              'Launched Price (Dubai)']
+fig, axes = plt.subplots(2, 5, figsize=(20, 15))
+for i, item in enumerate(list_price):
+    sns.lineplot(x=data[item], y=data['Back Camera'], marker='o', ax=axes[0, i])
+    sns.lineplot(x=data[item], y=data['Front Camera'], marker='o', color='red', ax=axes[1, i])
+plt.show()
 
 x = data.drop(['Company Name', 'Model Name', 'Mobile Weight', 'Launched Price (Pakistan)', 'Launched Price (India)',
                'Launched Price (China)', 'Launched Price (USA)', 'Launched Price (Dubai)'], axis=1)
