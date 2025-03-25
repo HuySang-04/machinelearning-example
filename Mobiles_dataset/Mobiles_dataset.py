@@ -94,7 +94,7 @@ model.fit(x_train, y_train)
 y_pred = model.predict(x_test)
 # best_model = model.named_steps['model'].best_estimator_
 # y_pred = best_model.predict(x_test)
-
+print('------------------------Result of train Mobiles dataset --------------------')
 print('Mean Absolute Error: ', mean_absolute_error(y_test, y_pred))
 print('Mean Squared Error: ', mean_squared_error(y_test, y_pred))
 print('R2 Score: ', r2_score(y_test, y_pred))

@@ -17,17 +17,17 @@ from sklearn import svm
 data = pd.read_csv('/home/sang/BaiTap/MachineLearning/60k Stack Overflow Questions/train.csv')
 data_test = pd.read_csv('/home/sang/BaiTap/MachineLearning/60k Stack Overflow Questions/valid.csv')
 
-# print(data.shape)
-# print(data.head())
-# print(data.describe())
-# print(data.info())
-# print(data.isnull().sum())
+print(data.shape)
+print(data.head())
+print(data.describe())
+print(data.info())
+print(data.isnull().sum())
 
-# plt.figure(figsize=(8, 6))
-# sns.countplot(x=data['Y'])
-# plt.title('Distribution of target')
-# plt.xlabel('Target')
-# plt.show()
+plt.figure(figsize=(8, 6))
+sns.countplot(x=data['Y'])
+plt.title('Distribution of target')
+plt.xlabel('Target')
+plt.show()
 
 x_train = data.drop(['Id', 'CreationDate', 'Y'], axis=1)
 y_train = data['Y']
@@ -53,5 +53,6 @@ model = Pipeline(steps=[
 model.fit(x_train, y_train)
 y_pred = model.predict(x_test)
 
-print(classification_report(y_test, y_pred))
+print(classification_report(y_test, y
+_pred))
 
