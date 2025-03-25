@@ -15,6 +15,7 @@ from lazypredict.Supervised import LazyClassifier
 from sklearn import svm
 
 data = pd.read_csv('/home/sang/BaiTap/MachineLearning/60k Stack Overflow Questions/train.csv')
+data_test = pd.read_csv('/home/sang/BaiTap/MachineLearning/60k Stack Overflow Questions/valid.csv')
 
 # print(data.shape)
 # print(data.head())
@@ -28,9 +29,10 @@ data = pd.read_csv('/home/sang/BaiTap/MachineLearning/60k Stack Overflow Questio
 # plt.xlabel('Target')
 # plt.show()
 
-x = data.drop(['Id', 'CreationDate', 'Y'], axis=1)
-y = data['Y']
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42, stratify=y)
+x_train = data.drop(['Id', 'CreationDate', 'Y'], axis=1)
+y_train = data['Y']
+x_test = data.drop(['Id', 'CreationDate', 'Y'], axis=1)
+y_test = data['Y']
 
 # clf = LazyClassifier(verbose=0,ignore_warnings=True, custom_metric=None)
 # models,predictions = clf.fit(x_train, x_test, y_train, y_test)
