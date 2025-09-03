@@ -1,7 +1,6 @@
 # Mobiles-Dataset-2025-
-![img_0](https://github.com/HuySang-04/Practice_MachineLearning/blob/main/Image/Figure_1.png)
-![img_1](Image/Screenshot%20from%202025-03-25%2014-46-37.png)
-![img_2](https://github.com/HuySang-04/Practice_MachineLearning/blob/bd4d364aca1b56190d69c926b3360f3713215219/Image/Screenshot%20from%202025-03-25%2014-48-25.png)
+![img_0](mobiles_dataset/2.png)
+![img_1](mobiles_dataset/3.png)
 
-# 60k Stack Overflow Questions
-![img_3](https://github.com/HuySang-04/Practice_MachineLearning/blob/main/Image/60k_stack_overflow_1.png)
+# Mail spam Classification and use IMAP_SLL to connect with email
+![img_3](mail_spam_classification/1.png)
